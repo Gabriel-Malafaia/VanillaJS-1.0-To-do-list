@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: #ADA996;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    min-width: 60%;
+    border-radius: 10px;
+    max-width: 95%;
+    display: flex;
+    flex-direction: column;
+    background: #8E2DE2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #08001a, #170725);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #160041, #190927); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 2px 2px 30px black;
+}
+
+.form h1 {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2em;
+    color: aliceblue;
+}
+
+.input {
+    width: 100%;
+    height: 3em;
+    /* background-color: aqua; */
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+}
+
+.input input {
+    width: 80%;
+    border: 1px solid rgb(0, 207, 0);
+    padding: 5px;
+    font-size: 18px;
+    height: 100%;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.input button {
+    width: 15%;
+    height: 100%;
+    border-radius: 0px 5px 5px 0px;
+    font-size: 18px;
+    background-color: rgb(0, 207, 0);
+}
+
+.input button:hover {
+    background-color: rgb(0, 175, 0);
+    color: rgb(89, 0, 92);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.form-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: auto;
+    padding: 1em;
+    font-size: 18px;
+    gap: 1em;
+}
+
+#alta {
+    background: linear-gradient(rgb(255, 70, 70), rgb(255, 98, 98), rgb(255, 120, 120));
+    border-radius: 5px;
+    padding: 2px;
+}
+
+#media {
+    background: linear-gradient(rgb(255, 190, 69), rgb(255, 201, 100), rgb(255, 214, 138));
+    border-radius: 5px;
+    padding: 2px;
+}
+
+#baixa {
+    background: linear-gradient(#6aff5d, #82ff77, #a1ff99);
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.list-tarefas {
+    margin-top: 1em;
+    overflow-y: auto;
+    max-height: 500px;
+    font-family: 'Prompt', sans-serif;
+}
+
+::-webkit-scrollbar {
+    background-color: #4D0A92;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#b163ff, #5d15a5, #b56aff);
+}
+
+h4 {
+    width: 95%;
+    margin: auto;
+    color: whitesmoke;
+}
+
+.list-tarefas li {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 95%;
+    min-height: 4em;    
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 1em;
+    transition: all 0.5s;
+}
+
+.list-tarefas li:hover {
+    transform: scale(1.03);
+    box-shadow: 1px 1px 10px;
+}
+
+.list-tarefas li img {
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+}
+
+.list-tarefas li:hover img {
+    filter: invert(23%) sepia(93%) saturate(7431%) hue-rotate(2deg) brightness(91%) contrast(128%);
+    transition: 0.3s;
+}
+
+.list-tarefas li:hover img:nth-child(1) {
+    filter: invert(11%) sepia(32%) saturate(7092%) hue-rotate(265deg) brightness(109%) contrast(103%);
+    transition: 0.3s;
+}
+
+.list-tarefas li button {
+    background: none;
+}
+
+.list-tarefas li p {
+    word-wrap: break-word;
+    max-width: 80%;
+    font-size: 26px;
+}
+
+.color-alta {
+    background: linear-gradient(rgb(255, 122, 122), rgb(255, 128, 128), rgb(255, 142, 142));
+}
+
+.color-media {
+    background: linear-gradient(rgb(255, 190, 69), rgb(255, 201, 100), rgb(255, 214, 138));
+}
+
+.color-baixa {
+    background: linear-gradient(#6aff5d, #82ff77, #a1ff99);
+}
+
+.color-vazia {
+    background-color: white;
+}
+
+
+.container-edit-text {
+    min-width: 300px;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.closed {
+    display: none;
+}
+
+.container-edit-text form {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 25%;
+    height: 4em;
+    border: 1px solid rgba(0, 0, 0, 0.329);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+
+.container-edit-text form input {
+    width: 70%;
+    height: 4em;
+    border-radius: 5px;
+    font-size: 24px;
+    background: none;
+    color: white;
+}
+
+.container-edit-text form input::placeholder {
+    color: white;
+}
+
+.change-or-not {
+    display: flex;
+    align-items: center;
+}
+
+.change-or-not button {
+    background-color: red;
+    height: 4em;
+}
+
+.change-or-not img {
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+}
+
+.change-or-not img:nth-child(1) {
+    filter: invert(55%) sepia(52%) saturate(5995%) hue-rotate(90deg) brightness(112%) contrast(110%);
+}
+
+.change-or-not img:nth-child(2) {
+    filter: invert(20%) sepia(96%) saturate(7447%) hue-rotate(2deg) brightness(97%) contrast(116%);
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <script defer src="./js/index.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+
+            <section class="form">
+                <h1>Lista de Tarefas</h1>
+
+                <form class="list-form">
+
+                    <div class="input">
+                        <input id="inputUsuario" autocomplete="off" type="text" placeholder="Digite sua Tarefa">
+                        <button id="buttonUsuario">Criar</button>
+                    </div>
+
+                    <div class="form-options">
+                        <div id="alta">
+                            <label for="prioridade-alta">Alta Prioridade: </label>
+                            <input type="radio" class="prioridade-alta" name="priority">
+                        </div>
+                       
+                        <div id="media">
+                            <label for="prioridade-media">Média Prioridade: </label>
+                            <input type="radio" class="prioridade-media" name="priority">
+                        </div>
+
+                        <div id="baixa">
+                            <label for="prioridade-baixa">Baixa Prioridade: </label>
+                            <input type="radio" class="prioridade-baixa" name="priority">
+                        </div>
+                    </div>
+                    
+                </form>
+            </section>
+            <h4>Quantidade de Tarefas: 0</h4>
+            <section>
+                <ul class="list-tarefas"> </ul>
+            </section>
+        </div>
+
+
+        <div class="container-edit-text closed">
+            <form>
+
+                <input autocomplete="off" class="input-text" type="text" placeholder="Digite seu novo texto...">
+
+                <div class="change-or-not">
+                    <img class="changeText" src="./img/circle-check-solid.svg" alt="">
+                    <img class="closeText"  src="./img/circle-xmark-solid.svg" alt="">
+                </div>
+            </form>
+        </div>
+
+    </main>
+</body>
+
+</html>
