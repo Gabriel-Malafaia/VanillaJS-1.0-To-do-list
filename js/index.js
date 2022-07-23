@@ -38,7 +38,7 @@ function criarItem(array) {
 
         <img class="edit" id="${array[i].index}" src="https://cdn-icons-png.flaticon.com/512/13/13467.png?w=360" alt="">
         <p>${array[i].texto}</p>
-        <img id="${array[i].index}" class="remove" src="../img/icons8-lixo-48-removebg-preview-removebg-preview.png" alt="">
+        <img id="${array[i].index}" class="remove" src="./img/icons8-lixo-48-removebg-preview-removebg-preview.png" alt="">
         </li> `
     }
     contadorTarefas.innerHTML = `Quantidade de Tarefas: ${arrayTarefas.length}`
